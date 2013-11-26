@@ -170,7 +170,10 @@ module Netzke
       # JavaScript includes
       ex = Netzke::Core.ext_path.join("examples")
 
-      js_include(ex.join("ux/CheckColumn.js"))
+      # Extjs 4.2 Change
+      # TODO: Confirm that this change has no impact on the functionality
+	
+      #js_include(ex.join("ux/CheckColumn.js"))
       js_include :check_column_fix
 
       # Includes for column filters
