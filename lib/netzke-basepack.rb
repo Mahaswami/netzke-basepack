@@ -17,7 +17,11 @@ module Netzke
       config.after_initialize do
         Netzke::Core.external_ext_css << "#{Netzke::Core.ext_uri}/examples/ux/grid/css/RangeMenu"
         Netzke::Core.external_ext_css << "#{Netzke::Core.ext_uri}/examples/ux/grid/css/GridFilters"
-        Netzke::Core.external_ext_css << "#{Netzke::Core.ext_uri}/examples/ux/css/CheckHeader"
+        # Commenting the below because Extjs 4.2 doesn't have this file
+	    # TODO: Need to confirm if this file exists built in
+        # in 4.2 so functionally the following comment is of
+        # No consequence        
+		#Netzke::Core.external_ext_css << "#{Netzke::Core.ext_uri}/examples/ux/css/CheckHeader"
       end
     end
   end
