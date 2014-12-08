@@ -178,17 +178,17 @@ module Netzke
       js_include :check_column_fix
 
       # Includes for column filters
-      if column_filters_available
-        [
-          "ux/grid/menu/ListMenu.js",
-          "ux/grid/menu/RangeMenu.js",
-          "ux/grid/FiltersFeature.js"
-        ].each{ |path| js_include(ex.join(path)) }
+     # if column_filters_available
+      #  [
+       #   "ux/grid/menu/ListMenu.js",
+       #   "ux/grid/menu/RangeMenu.js",
+       #   "ux/grid/FiltersFeature.js"
+       # ].each{ |path| js_include(ex.join(path)) }
 
-        %w{Boolean Date List Numeric String}.unshift("").each do |f|
-          js_include(ex.join"ux/grid/filter/#{f}Filter.js")
-        end
-      end
+#        %w{Boolean Date List Numeric String}.unshift("").each do |f|
+ #         js_include(ex.join"ux/grid/filter/#{f}Filter.js")
+  #      end
+   #   end
 
       # Includes for rows reordering
       if rows_reordering_available
