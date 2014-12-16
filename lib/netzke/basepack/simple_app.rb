@@ -36,7 +36,9 @@ module Netzke
 
       js_property :layout, :border
       #js_include "#{File.dirname(__FILE__)}/../../../../../../public/extjs/examples/ux/statusbar/StatusBar.js"
-      #js_include Netzke::Core.ext_path.join("examples", "ux/statusbar/StatusBar.js"), :statusbar_ext
+      if Rails.application.config.assets.enabled.blank?
+        js_include Netzke::Core.ext_path.join("examples", "ux/statusbar/StatusBar.js"), :statusbar_ext
+      end
 
       js_mixin :simple_app
 
