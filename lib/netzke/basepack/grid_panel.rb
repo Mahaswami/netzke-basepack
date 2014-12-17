@@ -178,7 +178,7 @@ module Netzke
       js_include :check_column_fix
 
       # Includes for column filters
-     if (column_filters_available and Rails.application.config.assets.extjs_assets_enabled.blank?)
+     if (column_filters_available and $assets_enabled.blank?)
         [
           "ux/grid/menu/ListMenu.js",
           "ux/grid/menu/RangeMenu.js",
